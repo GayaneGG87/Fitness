@@ -1,0 +1,141 @@
+@import 'variables';
+
+.container{
+    max-width: calc(var(--container) + ( var(--container-padding-x) * 2));
+    padding-inline:40px;
+    margin-inline: auto;
+}
+
+body,*, *:after, *:before{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+font-family: 'Heebo';
+color: var(--color-light);
+background: var(--color-dark-alternate);
+text-transform: uppercase;
+
+}
+
+ul{
+    list-style-type: none
+}
+a{
+    background: transparent;
+    text-decoration: none;
+    font-family: 'Heebo';
+}
+p:not([class]):not(:last-child){
+    margin-bottom: 24px;
+}
+svg * [fill]{
+    fill: currentColor;
+}
+svg * [stroke]{
+    stroke: currentColor;
+}
+svg * {
+    transition-duration:   0.2s;
+}
+
+svg * {
+    transition-property: fill, stroke;
+}
+svg:hover {
+    transform: scale(1.2);
+}
+
+.btn{
+    border-radius: 30px;
+    border: 1px solid white;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Heebo';
+    font-weight:700;
+    background:transparent;
+    text-decoration: none;
+    text-wrap: nowrap;
+
+}
+.visually-hidden {
+    position: absolute !important ;
+    width: 1px!important;
+    height: 1px!important;
+    margin: -1px!important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+
+.medium-title{
+    font-size:  clamp(24px, 2.8vw, 40px);
+    font-weight: bold;
+    
+}
+.input{
+    height: var(--input-height);
+    border-radius: 30px;
+    background: transparent;
+    padding-inline: 25px;
+    display: inline-flex;
+    border: 1px solid $gray;
+    color: $light-gray;
+    width: 100%;
+    &::placeholder{
+        color: $light-gray;
+    }
+    &:disabled{
+        color: $light-gray;
+    }
+}
+.btn-arrow{
+    height: 54px;
+    color:white;
+    position: relative;
+    transition-duration: .2s;
+    padding-inline: 30px 80px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 54px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: transparent;
+        background: url('../images/svg.qodef-svg--button-arrow.svg')  center / 60% no-repeat;
+        border: 1px solid white;
+        transition-duration: .2s;
+
+    }
+    &:hover{
+        background-color: white;
+        color: black;
+        &::before{
+            background-color: black;
+            transform: scale(.9)
+        }
+    }
+}
+.has-arrow{
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    &::before{
+        content: '';
+        width: 0.7em;
+        aspect-ratio: 1;
+        background: url('./../images/Vector.svg') center / 100%  no-repeat;
+        position: absolute;
+        scale: -1 1;
+        left: calc(100% + 10px);
+        top: 9px;
+        z-index: 10;
+    }
+}

@@ -1,0 +1,11 @@
+$light-gray: #C4C4C4;
+$gray: #404040;
+$transition-duration: 0.2s;
+$header-height:90px;
+$transparent: transparent;
+
+$iconSize: 80px;
+
+@media(max-width: 1000px){
+    $header-height: 50px;
+}

@@ -1,0 +1,245 @@
+@media (max-width:1670px){
+    .motivation__item-img{
+        margin-block: 0;
+    }   
+}
+@media(max-width: 1280px){
+    .training__types-list{
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+        column-gap: 50px;
+    } 
+    .locaton-map-image{
+        height: auto;
+    }
+    .location__body{
+        padding-block: 50px;
+    }
+    .calculate__form-body{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer__logo{
+        max-width: 270px;
+        width:  clamp(200px, 20.76vw, 270px);
+        height: auto;
+    }
+    .footer__main-inner{
+        padding-block: 100px;
+    }
+}
+@media (max-width: 1000px){
+    .container, .banner{
+        padding-inline: 20px;
+    }
+    .header{
+        flex-wrap: wrap;
+        padding-top: 20px;
+        gap: 5px 80px;
+    }
+    .header__navbar{
+        order: 1;
+        width: 100%;
+    }
+    .header__navbar-list{
+        gap: 5px;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+    .banner__info-content{
+        margin-bottom: 10px;
+        &::before{
+            margin-inline: 10px;
+        }
+    }
+    .motivation__item-img{
+        width: 30%;
+        height: auto;
+    }
+    .motivation__card-content{
+        width: 30.1vw;
+
+    }
+    .join__us-video-play{
+        width: 140px;
+    }
+    .join__us-video{
+        height: 700px;
+    }
+    .join__us-title{
+        margin-bottom: 40px;
+    }
+    .join__us-description{
+        margin-bottom: 100px;
+    }
+    .location{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .table__data{
+        th{
+            padding-block: 10px;
+        }
+        td{
+            padding-block: 8px;
+        }
+        tfoot td{
+            padding-top: 20px;
+        }
+        :is(th, td) {
+            padding-right: 10px;
+            &:not(:first-child){
+                padding-left: 10px;
+            }
+        }
+    }
+    .calculate__inner{
+        gap: 16px;
+    }
+    .footer__main-inner{
+        padding-block: 80px;
+    }
+    .footer__title{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+    .footer__body{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+  
+}
+
+@media (max-width: 786px){
+    .motivation__item-card{
+       padding-block: 50px;
+    }
+    .join__us-form-section{
+        flex-direction: column;
+    }
+    .join__us-title{
+        margin-top: -0.4em;
+    }
+    .join__us-description{
+        margin-bottom: 50px;
+    }
+    .join__us-content{
+        font-size: 16px;
+    }
+    .join__us-video{
+        height: 500px;
+    }
+    .family__body{
+        padding: 50px 15px ;
+    }
+    .backdrop-title::before{
+        top:-0.4em;
+    }
+    .family__gallery{
+        height: 320px;
+        gap: 15px;
+        img{
+            height: 320px;
+            width: auto;
+        }
+    }
+    .calculate__inner{
+        flex-direction: column;
+        margin-inline: 20px;
+        row-gap: 20px;
+    }
+}
+@media (max-width: 600px){
+    .motivation__item-card{
+        flex-direction: column-reverse;    
+    }
+    .motivation__item:nth-child(even){
+        .motivation__item-card{
+            flex-direction: column-reverse;
+        }
+    }
+    .motivation__item-img{
+        width: 70%;
+    }
+    .motivation__card-content{
+        width: 60vw;
+    }
+    .training__types-list{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    } 
+    .training__types-item{
+        padding-top: 60px;
+        background-size: 60px;
+        img{
+            width: 120px;
+            height: 110px;
+        }
+    }
+   .calculate__table{
+    width: 100%;
+    aspect-ratio: unset;
+        &::after{
+            display: none;
+        }
+   }
+   .table__data{
+    width: 100%;
+    th{
+        padding-block: 20px;
+    }
+    td{
+        padding-block: 15px;
+    }
+    tfoot td{
+        padding-top: 20px;
+    }
+    :is(th, td) {
+        padding-right: 20px;
+        &:not(:first-child){
+            padding-left: 20px;
+        }
+    }
+    tbody tr:last-child td:first-child{
+        &::before{
+            display: none;
+        }
+    }
+   
+}
+.footer__body{
+    grid-template-columns: 1fr;
+}
+.footer__main-inner {
+    padding-block: 40px;
+}
+.footer__subtitle{
+    margin-bottom: 5px;
+}
+.footer__column address {
+    margin-bottom: 15px;
+}
+.footer__soc1al-list {
+    padding-block: 20px 0;
+}
+}
+@media (max-width: 480px){
+    .header{
+        gap: 10px;
+    }
+    .header__logo-img{
+        width: 120px;
+    }
+    .header__navbar{
+        display: none
+    }
+    .header__action{
+        gap: 10px
+    }
+    .family__body-title{
+        width: 80%;
+    }
+
+}
