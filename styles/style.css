@@ -207,10 +207,19 @@ svg:hover {
   align-items: center;
   height: 90px;
   gap: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: black;
+  border-bottom: 1px solid darkgray;
 }
 
 .header__logo {
   display: flex;
+}
+
+.header__action-menu.btn {
+  display: none;
 }
 
 .header__logo-img {
@@ -854,6 +863,77 @@ svg:hover {
   color: white;
 }
 
+.mobile-overlay {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+  border: none;
+  background-color: #000000;
+}
+.mobile-overlay:modal {
+  max-width: 100%;
+  max-height: 100%;
+}
+.mobile-overlay__close-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.mobile-overlay__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.mobile-overlay__list {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 20px;
+  height: 50vh;
+}
+.mobile-overlay__item {
+  display: flex;
+  align-items: center;
+}
+.mobile-overlay__link {
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+}
+
+.cross-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  top: 20px;
+  transition-duration: 0.3s;
+  position: relative;
+}
+.cross-button:hover {
+  transform: scale(0.8);
+  opacity: 0.7;
+}
+.cross-button::after, .cross-button::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 6px;
+  background-color: black;
+  height: 2px;
+  width: 70%;
+  border-radius: 5px;
+}
+.cross-button::after {
+  rotate: 45deg;
+}
+.cross-button::before {
+  rotate: -45deg;
+}
+
 @media (max-width: 1670px) {
   .motivation__item-img {
     margin-block: 0;
@@ -891,6 +971,7 @@ svg:hover {
     flex-wrap: wrap;
     padding-top: 20px;
     gap: 5px 80px;
+    height: 140px;
   }
   .header__navbar {
     order: 1;
@@ -925,6 +1006,9 @@ svg:hover {
   }
   .join__us-description {
     margin-bottom: 100px;
+  }
+  .join__us-video-content {
+    max-width: 75%;
   }
   .location {
     display: flex;
@@ -1072,8 +1156,12 @@ svg:hover {
   }
 }
 @media (max-width: 480px) {
+  .header__action-menu.btn {
+    display: flex;
+  }
   .header {
     gap: 10px;
+    height: 90px;
   }
   .header__logo-img {
     width: 120px;

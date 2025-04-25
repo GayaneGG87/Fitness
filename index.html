@@ -41,9 +41,10 @@
             </ul>
         </nav>
         <div class="header__action">
-            <button class="header__action-book btn"
+            <button class="header__action-book btn burger-button"
             type="button">Book now</button>
             <button class="header__action-menu btn"
+            onclick="mobileOverlay.showModal()"
             type="button"
                     title="Open menu">
                     <span class="visually-hidden">Open menu</span>
@@ -458,6 +459,32 @@
             </div>
         </div>
     </div>
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+        <form method="dialog" class="mobile-overlay__close-button-wrapper">
+            <button class='mobile-overlay__button-close cross-button' type="submit">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+                <ul class="mobile-overlay__list">
+                    <li class="mobile-overlay__item">
+                        <a href="/" class="mobile-overlay__link">Home</a>
+                    </li>
+                    <li class="mobile-overlay__item">
+                        <a href="/" class="mobile-overlay__link">Pages</a>
+                    </li>
+                    <li class="mobile-overlay-item">
+                        <a href="/" class="mobile-overlay__link">Portfolio</a>
+                    </li>
+                    <li class=mobile-overlay__item">
+                        <a href="/" class="mobile-overlay__link">Blog</a>
+                    </li>
+                    <li class="mobile-overlay__item">
+                        <a href="/" class="mobile-overlay__link">Shop</a>
+                    </li>
+                </ul>
+        </div>
+       </dialog>
 </body>
 </html>
 </body>

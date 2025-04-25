@@ -35,10 +35,12 @@
         flex-wrap: wrap;
         padding-top: 20px;
         gap: 5px 80px;
+        height: 140px;
     }
     .header__navbar{
         order: 1;
         width: 100%;
+        
     }
     .header__navbar-list{
         gap: 5px;
@@ -70,6 +72,9 @@
     }
     .join__us-description{
         margin-bottom: 100px;
+    }
+    .join__us-video-content{
+        max-width: 75%;
     }
     .location{
         display: flex;
@@ -113,6 +118,8 @@
 }
 
 @media (max-width: 786px){
+
+  
     .motivation__item-card{
        padding-block: 50px;
     }
@@ -226,8 +233,15 @@
 }
 }
 @media (max-width: 480px){
+
+    .header__action-menu{
+        &.btn{
+            display: flex;
+        }
+    }
     .header{
         gap: 10px;
+        height: $header-height;
     }
     .header__logo-img{
         width: 120px;
